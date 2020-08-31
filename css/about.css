@@ -1,7 +1,6 @@
 html,body {
     margin: 0;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.829);
 }
 /* Nav Section */
 #navbar {
@@ -13,6 +12,15 @@ html,body {
     align-items: center;
     justify-content: flex-end;
   } 
+  .logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.logo p {
+    margin-left: 4px;
+}
 #navbar a {
     color: #f2f2f2;
     text-align: center;
@@ -47,7 +55,12 @@ html,body {
     justify-content: center;
     align-items: center;
 }
-
+h2, h3 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.about-company p {
+    font-family: "Courier New", Courier, monospace;
+}
 .mr-4 {
     margin-right : 32px;
 }
@@ -69,6 +82,7 @@ html,body {
 .mb-1 {
     margin-bottom: 4px;
 }
+/* grid */
 .grid {
     display: grid;
     grid-template-areas: 
@@ -86,9 +100,11 @@ html,body {
 .grid-4 {grid-area: g4;}
 .grid-5 {grid-area: g5;}
 .grid-6 {grid-area: g6;}
-p, .text-white {
+.text-white {
     color: white;
 }
+
+/* cards */
 .card-column {
     display: flex;
     flex-direction: row;
@@ -97,7 +113,7 @@ p, .text-white {
 .card {
     width: 400px;
     height: 600px;
-    border: 1px solid white;
+    border: 2px solid black;
     padding: 16px;
 }
 .card img {
@@ -114,6 +130,7 @@ hr {
 /* Footer */
 footer {
     background: black;
-    height: 70px;
+    height: 85px;
+    font-family: "Comic Sans MS", cursive, sans-serif; 
     padding: 32px;
   }

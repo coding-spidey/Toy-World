@@ -1,7 +1,7 @@
 window.onscroll = function () { myFunction() };
 const navbar = document.getElementById("navbar");
 const sticky = navbar.offsetTop;
-let slideIndex = 1;
+let slideIndex = 0;
 const cart = document.getElementById("lblCartCount");
 var count = 0;
 const modal = document.getElementsByClassName("modal");
@@ -24,31 +24,18 @@ function myFunction() {
 
 
 // Slider 
-showSlides(slideIndex);
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-function showSlides(n) {
+showSlides();
+function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" activeDot", "");
-    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " activeDot";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
 // Add Item to cart
@@ -84,10 +71,84 @@ window.onclick = function (event) {
 }
 
 function onLogin() {
-    modal[0].style.display = "none";
-    alert("You Have been Logged In sucessfully!!");
+    const lu = document.getElementById("lusername").value;
+    const p = document.getElementById("lpassword").value;
+    var a = true
+    var b = true
+    var bool = true
+    if (lu == "") {
+        text = "*Please Enter Username";
+        document.getElementById("luText").innerHTML = text
+        a = false;
+        bool = false;
+    }
+    if (p == "") {
+        text = "*Please Enter Password";
+        document.getElementById("lpText").innerHTML = text
+        b = false;
+        bool = false;
+    }
+    if (a == true) {
+        document.getElementById("luText").innerHTML = "";
+    }
+    if (b == true) {
+        document.getElementById("lpText").innerHTML = "";
+    }
+    if (bool == true) {
+        modal[0].style.display = "none";
+        alert("You Have been Logged In sucessfully!!");
+        document.getElementById("loginModal").reset();
+    }
 }
 function onSignUp() {
-    modal[1].style.display = "none";
-    alert("Sign Up Complete");
+    const su = document.getElementById("susername").value;
+    const sp = document.getElementById("spassword").value;
+    const fn = document.getElementById("fname").value;
+    const ln = document.getElementById("lname").value;
+    var a = true
+    var b = true
+    var c = true
+    var d = true
+    var bool = true
+    if (su == "") {
+        text = "*Please Enter Username";
+        document.getElementById("suText").innerHTML = text
+        a = false;
+        bool = false;
+    }
+    if (sp == "") {
+        text = "*Please Enter Password";
+        document.getElementById("spText").innerHTML = text
+        b = false;
+        bool = false;
+    }
+    if (fn == "") {
+        text = "*Please Enter First Name";
+        document.getElementById("sfText").innerHTML = text
+        c = false;
+        bool = false;
+    }
+    if (ln == "") {
+        text = "*Please Enter Last Name";
+        document.getElementById("slText").innerHTML = text
+        d = false;
+        bool = false;
+    }
+    if (a == true) {
+        document.getElementById("suText").innerHTML = "";
+    }
+    if (b == true) {
+        document.getElementById("spText").innerHTML = "";
+    }
+    if (c == true) {
+        document.getElementById("sfText").innerHTML = "";
+    }
+    if (d == true) {
+        document.getElementById("slText").innerHTML = "";
+    }
+    if (bool == true) {
+        modal[1].style.display = "none";
+        alert("Sign Up Complete");
+        document.getElementById("SignUpModal").reset();
+    }
 }

@@ -11,7 +11,16 @@ html,body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-  } 
+  }
+  .logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.logo p {
+    margin-left: 4px;
+} 
 #navbar a {
     color: #f2f2f2;
     text-align: center;
@@ -45,8 +54,19 @@ html,body {
     width: 100px;
     height: 100px;
 }
+.content small {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.content h3, .content p {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+} 
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
 h2 {
     font-size: 40px;
+    font-family: "Arial Black", Gadget, sans-serif;
 }
 
 /* form */
@@ -108,8 +128,9 @@ input[type=text], input[type=email], select, textarea {
   /* Footer */
 footer {
   background: black;
-  height: 70px;
+  height: 85px;
   padding: 32px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .text-white {
   color: white;

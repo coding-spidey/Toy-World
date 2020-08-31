@@ -13,6 +13,15 @@ html, body {
     align-items: center;
     justify-content: flex-end;
   } 
+  .logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.logo p {
+    margin-left: 4px;
+}
 #navbar a {
     color: #f2f2f2;
     text-align: center;
@@ -38,6 +47,10 @@ html, body {
 }
 #content {
     padding-top: 32px;
+    font-family:"Times New Roman", Times, serif;
+}
+h2 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #content img {
     width: 700px;
@@ -110,8 +123,9 @@ button span {
 /* Footer */
 footer {
     background: black;
-    height: 70px;
+    height: 85px;
     padding: 32px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
   }
 .text-white {
     color: white;

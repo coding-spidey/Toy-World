@@ -54,23 +54,28 @@
     <section id="slider">
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="images/lego.jpg" style="width:100%">
+                <img src="images/hulk.jpg" style="width:100%">
+                <div class="text">
+                    <div class="t2">Witness SuperHeroes on their full Might</div>
+                    <a href="superHero.html" id="two"><i>Click Here</i></a>
+                </div>
             </div>
             <div class="mySlides fade">
-                <img src="images/hulk.jpg" style="width:100%">
+                <img src="images/lego.jpg" style="width:100%">
+                <div class="text">
+                    <div class="t1">Buy Best Girls Toys Only Here</div>
+                    <a href="girls.html" id="one">Click Here</a>
+                </div>
             </div>
             <div class="mySlides fade">
                 <img src="images/nerf.jpg" style="width:100%">
+                <div class="text">
+                    <div class="t3">Nerf Over Your Fav Guns</div>
+                    <a href="#" id="three"><i>Click Here</i></a>
+                </div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
     </section>
 
     <!-- Content -->
@@ -149,11 +154,13 @@
         <div class="modal-content">
             <form id="loginModal">
                 <label for="username">Username</label>
-                <input type="text" name="username">
+                <input type="text" name="username" id="lusername">
+                <small id="luText"></small><br>
                 <label for="password">Password</label>
-                <input type="password" name="password">
+                <input type="password" name="password" id="lpassword">
+                <small id="lpText"></small><br>
                 <div class="button-group">
-                    <button onclick="onLogin()">Login</button>
+                    <button onclick="onLogin()" type="button">Login</button>
                     <button class="close">Close</button>
                 </div>
             </form>
@@ -164,15 +171,19 @@
         <div class="modal-content">
             <form id="SignUpModal">
                 <label for="fname">Enter First Name</label>
-                <input type="text" name="fname">
+                <input type="text" name="fname" id="fname">
+                <small id="sfText"></small><br>
                 <label for="lname">Enter Last Name</label>
-                <input type="text" name="lname">
+                <input type="text" name="lname" id="lname">
+                <small id="slText"></small><br>
                 <label for="username">Enter Username</label>
-                <input type="text" name="username">
+                <input type="text" name="username" id="susername">
+                <small id="suText"></small><br>
                 <label for="password">Enter Password</label>
-                <input type="password" name="password">
+                <input type="password" name="password" id="spassword">
+                <small id="spText"></small><br>
                 <div class="button-group">
-                    <button onclick="onSignUp()">Sign Up</button>
+                    <button onclick="onSignUp()" type="button">Sign Up</button>
                     <button class="close">Close</button>
                 </div>
             </form>
