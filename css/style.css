@@ -1,0 +1,332 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+ /* Header */
+ .header {
+    background: black;
+    width: 100%;
+    font-size: large;
+    opacity: 0.7;
+    color: #fff;
+    height: 80px;
+  }
+  nav {
+      padding-top: 20px;
+  }
+  .nav-header {
+    display: inline;
+    padding-left: 16px;
+  }
+  nav li {
+    display: inline;
+  }
+  nav ul {
+    display: inline;
+    padding-left: 25%;
+  }
+  #lblCartCount {
+    font-size: 12px;
+    background: transparent;
+    padding: 0 5px;
+    vertical-align: top;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+#cart :hover {
+    cursor: pointer;
+}
+#login {
+    padding-left: 16px;
+}
+#signUp {
+    padding-left: 32px;
+}
+#cart {
+    float: right;
+    padding-right: 16px;
+}
+#blackPanther {
+    color: rgb(248, 0, 0);
+}
+
+/* Intro Section */
+#intro {
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#intro h2 {
+    padding-left: 16px;
+    color: red;
+}
+#intro small {
+    padding-left: 8px;
+    padding-top: 8px;
+    color: rgba(250, 3, 3, 0.466);
+}
+#intro input[type=text] {
+    padding: 6px;
+    margin-left: 50%;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 17px;
+}
+#intro button {
+    float: right;
+    padding: 6px 10px;
+    margin-left: 4px;
+    border-radius: 4px;
+    margin-right: 16px;
+    background: rgba(240, 9, 9, 0.747);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Nav Section */
+#navbar {
+    overflow: hidden;
+    background-color: red;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  } 
+#navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 32px;
+    text-decoration: none;
+  }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.sticky + .content {
+    padding-top: 60px;
+  }
+.active {
+    background-color: rgba(153, 13, 13, 0.705);
+}
+#navbar a:hover {
+    background-color: rgba(153, 13, 13, 0.5);
+}
+
+
+/* Slider */
+.mySlides {
+    display: none;
+  }
+#slider img {
+    background-size: contain;
+    height: 500px;
+  }
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #fa0303;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .activeDot,
+  .dot:hover {
+    background-color: #111111;
+  }
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+  }
+
+
+  /* Content */
+
+  #content {
+      padding-top: 16px;
+  }
+
+  #content h2 {
+      text-align: center;
+      color: red;
+      font-size: xx-large;
+  }
+  .vl {
+    border-left: 1px solid red;
+    height: 70%;
+    margin-top: 32px;
+  }
+  .card {
+      margin : auto;
+      margin-bottom: 16px;;
+      display: flex;
+      flex-direction: row;
+      border: 2px solid red;
+      height: 400px;
+      width: 80%;
+  }
+  .card-img {
+      width: 270px;
+      height: 270px;
+      margin: auto;
+      padding-right: 8px;
+      padding-left: 8px;
+      background-size: contain;
+  }
+  .card-body{
+      padding-left: 70px;
+      padding-top: 16px;
+  }
+  .card-body.right {
+      padding-right: 350px;
+  }
+  .card h3 {
+    font-size: larger;
+  }
+  .card ul {
+      padding-top: 16px;
+  }
+  .buttons {
+      display: inline;
+  }
+  .buttons button {
+      border-radius: 8px;
+      margin : 16px;
+      background-color: white;
+      background-color: rgba(255, 0, 0, 0.8);
+      text-align: center;
+      color: white;
+      border: none;
+      height: 32px;
+      box-shadow: 0 9px #999;
+  }
+  .buttons button:active {
+    background-color: red;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  /* Footer */
+  footer {
+    background: black;
+    height: 70px;
+    padding: 32px;
+  }
+
+
+  /* Modal */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .modal-content {
+    background-color: transparent;
+    margin: auto; /* 15% from the top and centered */
+    padding: 8px;
+    width: 30%;
+    color: white; /* Could be more or less, depending on screen size */
+  }
+form {
+    padding: 32px 8px 40px 8px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.685);
+    border-radius: 8px;
+}
+input {
+    border-radius: 4px;
+    height: 24px;
+}
+.button-group {
+    margin-top: 8px;
+    display: block;
+}
+.button-group button {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 4px;
+    height: 32px;
+    width: 108px;
+}
+.button-group button:hover {
+    background-color : white;
+    color: black;
+    cursor: pointer;
+}
+
+.text-white {
+  color: white;
+}
+.text-center {
+  text-align: center;
+}

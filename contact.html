@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+    <!-- Intro -->
+    <section id="navbar">
+        <a href="index.html">Home</a>
+        <a href="superHero.html">SuperHeroes</a>
+        <a href="girls.html">Girls</a>
+        <a href="contact.html" class="active">Contact Us</a>
+        <a href="about.html">About Us</a>
+    </section>
+
+    <!-- content -->
+    <h1 class="text-red text-center">Contact Us</h1>
+    <section class="content">
+        <div class="flex-row">
+            <div class="about-us">
+                <div class="container">
+                    <div class="flex-row">
+                        <img src="images/logo.png" alt="">
+                        <h2 class="text-red ml-3 pt-3">Toy World</h2>
+                    </div>
+                    <div class="ml-3">
+                        <h2 class="mb-0">Toy World</h2>
+                        <small class="mt-0">
+                            52nd Street, New York,<br>
+                            NY 10019<br>
+                            USA
+                        </small>
+                        <br><br>
+                        <h3>E-mail :</h3>
+                        <p>test@test.com</p>
+                        <h3>Contact No. :</h3>
+                        <p>+(123)-456-789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <form id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name..">
+                    <span><small class="text-red" id="nameText"></small></span>
+                    <div class="mb-4"></div>
+
+                    <label for="email">Enter email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter E-mail">
+                    <small class="text-red" id="emailText"></small>
+                    <div class="mb-4"></div>
+
+                    <label for="contact">Your Contact no.</label>
+                    <input type="text" id="contact" name="contact">
+                    <small class="text-red" id="contactText"></small>
+                    <div class="mb-4"></div>
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="india">India</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                    <div class="mb-4"></div>
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write Your Query..."
+                        style="height:200px"></textarea>
+                    <small class="text-red" id="subjectText"></small>
+                    <div class="mb-4"></div>
+
+
+                </form>
+                <button onclick="validateForm()">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer py-3">
+        <p class="text-white text-center">
+            Copyright &copy; <span id="year"></span> Toy World
+        </p>
+    </footer>
+    <script src="js/year.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

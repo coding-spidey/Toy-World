@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/33cbc9a4d9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <section class="header">
+        <nav>
+            <div class="nav-header">Flat 50% Discount due to the Death of <span id="blackPanther">Mr. Chadwick
+                    Boseman</span></div>
+            <ul>
+                <l1>
+                    <a href="#" id="login">Login</a>
+                </l1>
+                <l1>
+                    <a href="#" id="signUp">Signup</a>
+                </l1>
+                <li id="cart" onclick="showCartItems()">
+                    <i class="fa fa-shopping-cart"></i>
+                    <a href="#" class="icon-shopping-cart" style="font-size: 25px">
+                        <asp:Label ID="lblCartCount" runat="server" CssClass="badge badge-warning" ForeColor="White" />
+                        0</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Intro -->
+    <section id="intro">
+        <img src="images/logo.png">
+        <h2>Toy World</h2>
+        <small>Toys that even adults can't resist.</small>
+        <input type="text" placeholder="Search..">
+        <button><i class="fa fa-search"></i></button>
+    </section>
+
+    <!-- Navbar -->
+    <section id="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="superHero.html">SuperHeroes</a>
+        <a href="girls.html">Girls</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+    </section>
+
+    <!-- Slider -->
+    <section id="slider">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/lego.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/hulk.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/nerf.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section id="content">
+        <h2>Recommendations</h2>
+        <div class="card">
+            <img src="images/ring.jpg" class="card-img">
+            <div class="vl"></div>
+            <div class="card-body">
+                <h3>Little's Junior Ring (Multicolour)</h3>
+                <small>₹ 149.00 <del>₹ 300.00</del></small>
+                <ul>
+                    <li>Little's junior ring is an attractive educational toy which helps your baby recognize different
+                        colours and sizes while having fun stacking them in order</li>
+                    <li>Little's junior ring helps your baby naturally develop concepts of colour, shape and size
+                        through fun filled play activity</li>
+                    <li>Helps in developing the finger skills of the baby</li>
+                </ul>
+                <div class="buttons">
+                    <button onclick="increaseCount()">Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body right">
+                <h3>Nerf N Strike Elite Disruptor, Multi Color</h3>
+                <small>₹ 799.00 <del>₹ 1600.00</del></small>
+                <ul>
+                    <li>6-Dart Rotating Drum , Quick-Draw Blaster</li>
+                    <li>Slam-Fire Action</li>
+                    <li>Fires Darts Up To 90 Feet (27 Meters)</li>
+                </ul>
+                <div class="buttons">
+                    <button onclick="increaseCount()">Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div class="vl"></div>
+            <img src="images/nerfGun.jpg" class="card-img">
+        </div>
+        <div class="card">
+            <img src="images/barbie.jpg" class="card-img">
+            <div class="vl"></div>
+            <div class="card-body">
+                <h3>Barbie - FXL68 Glitz Doll (Black/White Stripe Ruffle Dress)</h3>
+                <small>₹ 499.00 <del>₹ 999.00</del></small>
+                <ul>
+                    <li>Barbie doll makes the best-dressed list in these fun, trendy looks, the dresses are perfect for
+                        all kinds of storytelling, from casual girls night out to a fancy premiere party</li>
+                    <li>With dramatic touches like a one-shoulder bodice and a big ruffle, bright colors and bold
+                        stripes make a modern fashion statement</li>
+                    <li>Matching heels add edge with studded detailing, collect them all to expand the storytelling
+                        possibilities because when a girl plays with Barbie, she imagines everything she can become
+                        (each sold separately, subject to availability)</li>
+                </ul>
+                <div class="buttons">
+                    <button onclick="increaseCount()">Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer py-3">
+        <p class="text-white text-center">
+            Copyright &copy; <span id="year"></span> Toy World
+        </p>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal">
+        <div class="modal-content">
+            <form id="loginModal">
+                <label for="username">Username</label>
+                <input type="text" name="username">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+                <div class="button-group">
+                    <button onclick="onLogin()">Login</button>
+                    <button class="close">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <form id="SignUpModal">
+                <label for="fname">Enter First Name</label>
+                <input type="text" name="fname">
+                <label for="lname">Enter Last Name</label>
+                <input type="text" name="lname">
+                <label for="username">Enter Username</label>
+                <input type="text" name="username">
+                <label for="password">Enter Password</label>
+                <input type="password" name="password">
+                <div class="button-group">
+                    <button onclick="onSignUp()">Sign Up</button>
+                    <button class="close">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
